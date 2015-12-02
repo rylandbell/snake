@@ -1,0 +1,149 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+	background-color: darkgrey;
+	font-weight: bold;
+	font-family: sans-serif;
+	}
+
+#gamecontainer{
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	padding: 0px;
+	width: 495px;
+
+}
+/*------BEGIN GAME BOARD FORMATTING:-----*/
+
+.gridsquare{
+	width: 30px;
+	height: 30px;
+	margin: 0px 1px 0px 0px;
+	display: inline-block;
+	background-color: black;
+}
+
+.gridrow{
+	width: 500px;
+	height: 30px;
+	margin: 1px 0px 0px 0px;
+	padding: 0;
+	display: block;
+}
+
+.apple{
+	background-color: blue;
+}
+
+.active{
+	background-color: darkgreen;
+}
+
+.collision{
+	background-color: red;
+}
+/*-----END GAME BOARD FORMATTING:-----*/
+
+/*------BEGIN SCOREBOARD FORMATTING:-----*/
+#scoreboard{
+	width: 495px;
+	font-size: 1.5em;
+	height: 40px;
+	text-align: center;
+	background-color: black;
+	color: darkgrey;
+	margin-top: -29px;
+	border-radius: 0px 0px 12px 12px;
+}
+
+#gameover{
+	color: #dd0000;
+	font-size: 36px;
+}
+
+.currentuserrow{
+	color: lightred;
+	background-color: #003333;
+}
+
+#currentscore{
+	color: darkgreen;
+}
+/*------END SCOREBOARD FORMATTING:-----*/
+
+
+/*------BEGIN ANNOUNCEMENT FORMATTING:-----*/
+.announcebox{
+	display:none;
+	font-size: 24px;
+	text-align: center;
+	color: #dddddd;
+	border: 2px solid #00dddd;
+	position:absolute;
+	width: 300;
+	left:103px;
+	top: 103px;
+	background: rgba(25,25,25,.95);
+	border-radius: 10px;
+}
+
+#initialsbox{
+	text-transform: uppercase;
+	font-size: 3em;
+	width: 180px;
+	background: black;
+	color: #00bbbb;
+	text-align: center;
+}
+
+#highscoreholder{
+	padding: 10px;
+}
+
+#newgame{
+	background-color: black;
+	color: #00DDDD;
+	padding: 10px;
+	border-radius: 10px;
+	border: 0px;
+}
+	
+	/*------BEGIN HIGH SCORE TABLE:-----*/
+	table{
+		margin-left:auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+		border-collapse: collapse;
+		color: #dddddd;
+		font-size: 18px;
+	}
+
+	th{
+		padding: 3px 6px 3px 6px;
+		border: 1px #00dddd solid;
+		border-bottom: 2px solid #00dddd;
+	}
+	td{
+		padding: 3px 6px 3px 6px;
+		border: 1px #00dddd solid;
+	}
+
+	input[type="button"]{
+		font-size: 24px;
+	}
+
+	.score{
+		text-align: right;
+	}
+
+	.playername{
+		width: 120px;
+		text-align: center;
+	}
+	/*------END HIGH SCORE TABLE:-----*/
+/*------END ANNOUNCEMENT FORMATTING:-----*/

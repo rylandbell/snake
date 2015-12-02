@@ -1,0 +1,42 @@
+<!DOCTYPE = html>
+<html>
+<head>
+	<title>My Title</title>
+	<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<div id="gamecontainer">
+		<div id="gameboard"></div>
+		<div id = "scoreboard">
+			<h2>
+				SCORE: <span id="currentscore">0</span>
+			</h2>	
+		</div>
+
+		<div id="announce1" class="announcebox">
+			<p><span id="gameover">GAME OVER</span></p>
+			<div id="highscore">
+				<p>High Score! Enter your initials:</p>
+				<form id="initials">
+					<input type="text" maxlength=3 id="initialsbox" autocomplete="off"></input>
+				</form>
+			</div>
+		</div>
+
+		<div id="announce2" class="announcebox">
+			<p>High Scores:</p>
+			<div id="highscoreholder">
+			</div>
+			<form>
+				<input type="button" value="TRY AGAIN" id="newgame"/>		
+			</form>
+		</div>
+	</div>
+
+
+	<script src = "jquery-1.11.0.js"></script>
+	<script src = "myscript.js"></script>
+</body>
+</html>
+
+
