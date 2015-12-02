@@ -15,6 +15,7 @@ $(document).ready(function(){
 	var activeRow;
 	var activeColumn;
 	var gridSize;
+	var squareWidth;
 	var myTimer;
 	var gameSpeed;
 	var currentScore;
@@ -66,6 +67,7 @@ $(document).ready(function(){
 		activeColumn = 5;
 		gridSize = 16;
 		gameSpeed = 150;
+		squareWidth = 30;
 
 		drawGrid(gridSize);
 		updateGrid(activeRow,activeColumn);
@@ -76,6 +78,13 @@ $(document).ready(function(){
 		displayHighScore();
 		$('#currentscore').text(currentScore);
 		$('#highscore').show();
+	}
+
+	function adjustSize(){
+		var rowWidth = squareWidth*gridSize+(gridSize);
+		$('.gridsquare').css({width: squareWidth, height: squareWidth});
+		$('.gridRow').css({width: rowWidth, height: squareWidth});
+		$('#gamecontainer').css({width: rowWidth});
 	}
 
 	//updates background variables, calls on updateGrid to update the visible gameboard
@@ -168,6 +177,7 @@ $(document).ready(function(){
 				$('.gridrow:eq('+i+')').append($newDiv);
 			}
 		}
+		adjustSize();
 	}
 
 	//ends game, brings up end-game displays

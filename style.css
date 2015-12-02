@@ -2,6 +2,7 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+
 }
 
 body{
@@ -16,6 +17,7 @@ body{
 	position: relative;
 	padding: 0px;
 	width: 495px;
+	height: 600px;
 
 }
 /*------BEGIN GAME BOARD FORMATTING:-----*/
@@ -51,7 +53,7 @@ body{
 
 /*------BEGIN SCOREBOARD FORMATTING:-----*/
 #scoreboard{
-	width: 495px;
+	width: 100%;
 	font-size: 1.5em;
 	height: 40px;
 	text-align: center;
@@ -84,10 +86,12 @@ body{
 	text-align: center;
 	color: #dddddd;
 	border: 2px solid #00dddd;
+	width: 74%;
+	padding: 10px;
 	position:absolute;
-	width: 300;
-	left:103px;
-	top: 103px;
+	left:13%;
+	top: 10%;
+
 	background: rgba(25,25,25,.95);
 	border-radius: 10px;
 }
