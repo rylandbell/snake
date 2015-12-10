@@ -1,10 +1,6 @@
-// better formatting on new-gamebutton, 
-// **validate form input: text characters only!
-// move to 3 slides: game over>enter initials(sometimes)>new game+high score table
 // resize full gameboard in smaller window?
 
 //this is a big project. can i better organize my code?
-// 2 css files? layout and formatting separate?
 
 $(document).ready(function(){
 	//initialize "global" variables:
@@ -238,15 +234,30 @@ $(document).ready(function(){
 	$('#initials').on('submit',function(e){
 		e.preventDefault();
 		var init = $('#initialsbox').val();
+		if(lettersOnly(init)){
 		$('#initialsbox').val("");
-		init=escape(init);
-		init=init.toUpperCase();
-		handleHighScore(init);
-		$('#announce1').fadeOut(500);
-		$('.currentuserrow td').css({opacity:0}).delay(500).animate({opacity:1},700);
-		$('#announce2').fadeIn(500);
-		$('#newgame').focus();
+			init=init.toUpperCase();
+			handleHighScore(init);
+			$('#announce1').fadeOut(500);
+			$('.currentuserrow td').css({opacity:0}).delay(500).animate({opacity:1},700);
+			$('#announce2').fadeIn(500);
+			$('#newgame').focus();
+			$('#lettersonly').hide();
+		} else {
+			$('#lettersonly').fadeIn(300);
+		}
+
 	});
+
+	function lettersOnly(initials){
+		for (var i=0;i<initials.length;i++){
+		    var charCode = initials.charCodeAt(i);
+		    if (charCode<65 || charCode>122 || (charCode>90 && charCode <97)){
+		        return false;
+		    }
+		}
+		return true;
+	}
 
 	function displayHighScore(currentUserRank){
 		if(!localStorage.highScores){

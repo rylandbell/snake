@@ -105,6 +105,12 @@ body{
 	text-align: center;
 }
 
+#lettersonly{
+	display:none;
+	font-size: 16px;
+	color: #dd0000;
+}
+
 #highscoreholder{
 	padding: 10px;
 }
