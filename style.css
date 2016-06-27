@@ -18,8 +18,8 @@ body{
 	padding: 0px;
 	width: 495px;
 	height: 600px;
-
 }
+
 /*------BEGIN GAME BOARD FORMATTING:-----*/
 
 .gridsquare{
@@ -58,9 +58,13 @@ body{
 	height: 40px;
 	text-align: center;
 	background-color: black;
-	color: darkgrey;
+	color: #cccccc;
 	margin-top: -29px;
 	border-radius: 0px 0px 12px 12px;
+}
+
+#scoreboard h2{
+	color: white;
 }
 
 #gameover{
@@ -76,8 +80,15 @@ body{
 #currentscore{
 	color: darkgreen;
 }
-/*------END SCOREBOARD FORMATTING:-----*/
 
+#instructions{
+	border: 1px solid #555555;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 4px;
+	box-shadow: 0 0 0.8em 0.2em #555555;
+}
+/*------END SCOREBOARD FORMATTING:-----*/
 
 /*------BEGIN ANNOUNCEMENT FORMATTING:-----*/
 .announcebox{

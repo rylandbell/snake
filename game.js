@@ -1,7 +1,3 @@
-// resize full gameboard in smaller window?
-
-//this is a big project. can i better organize my code?
-
 $(document).ready(function(){
 	//initialize "global" variables:
 	var currentDirection;
@@ -29,27 +25,27 @@ $(document).ready(function(){
 		    case 37:
 		    	e.preventDefault();
 		    	if(currentDirection!="right"){
-					currentDirection = "left";
-				}
-		        break;
-	        case 39:
-	        	e.preventDefault();
-	        	if(currentDirection!="left"){
-					currentDirection = "right";
-				}
-		        break;
-	        case 38:
-	        	e.preventDefault();
-	        	if(currentDirection!="down"){
-					currentDirection = "up";
-				}
-		        break;
-	        case 40:
-	        	e.preventDefault();
-	        	if(currentDirection!="up"){
-					currentDirection = "down";
-				}
-		        break;
+						currentDirection = "left";
+					}
+		      break;
+	      case 39:
+	        e.preventDefault();
+	        if(currentDirection!="left"){
+						currentDirection = "right";
+					}
+		      break;
+	      case 38:
+	       	e.preventDefault();
+	        if(currentDirection!="down"){
+						currentDirection = "up";
+					}
+		      break;
+	      case 40:
+	        e.preventDefault();
+	        if(currentDirection!="up"){
+						currentDirection = "down";
+					}
+		      break;
 		}
 	});
 
@@ -296,4 +292,11 @@ $(document).ready(function(){
 			$('#highscoreholder tr:eq('+(currentUserRank+1)+')').addClass('currentuserrow');
 		}
 	}
+
+	//fade instructions box out on first snake movement:
+	$(this).on('keydown',function(e){
+		if(e.which >= 37 && e.which <=40){
+			$('#instructions').fadeOut(1000);
+		}
+	});
 });
