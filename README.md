@@ -1,10 +1,10 @@
-# TaskMan
+# Snake
 
-A simple task management web app I created to learn about full-stack web development. It's built on Express, Node, and MongoDB, and uses Passport to manage user accounts and OAuth 2.0 to connect with the Google Calendar API.
+An implementation of the class Snake game, using CSS-styled divs to build the game board, and Javascript/jQuery to handle the keyboard input and update the game state. High scores are stored locally via localStorage.
 
 ## Usage
 
-TODO: Write usage instructions
+Control your snake with the arrow keys. Can you beat my high score of 51?
 
 
 ## License
